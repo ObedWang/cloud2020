@@ -4,12 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author : wangeb
- * @date : 2020/10/14 12:58
+ * @author ：web
+ * @date ：21:26 2020/10/16
  */
 @SpringBootApplication
-public class Application {
+public class OrderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(OrderApplication.class, args);
     }
 }
