@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author ：web
@@ -25,7 +26,7 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
     @Value("${server.port}")
-    private String port;
+    private String serverPort;
 
     @PostMapping(value = "/payment/create")
     public Object create(@RequestBody Payment payment) {
@@ -33,7 +34,7 @@ public class PaymentController {
         log.info("*****插入结果：" + result);
         if (result > 0) {
             //成功
-            return new CommonResult<>(200, "插入数据库成功, port = "+port, result);
+            return new CommonResult<>(200, "插入数据库成功, port = "+ serverPort, result);
         } else {
             return new CommonResult<>(444, "插入数据库失败", null);
         }
@@ -45,7 +46,7 @@ public class PaymentController {
         log.info("*****查询结果：" + payment);
         if (payment != null) {
             //说明有数据，能查询成功
-            return new CommonResult<>(200, "查询成功, port = "+port, payment);
+            return new CommonResult<>(200, "查询成功, port = "+ serverPort, payment);
         } else {
             return new CommonResult<>(444, "没有对应记录，查询ID：" + id, null);
         }
@@ -66,7 +67,14 @@ public class PaymentController {
 
     @GetMapping(value = "/payment/lb")
     public String getPaymentLB() {
-        return port;
+        return serverPort;
+    }
+
+
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout(){
+        try { TimeUnit.SECONDS.sleep(3); }catch (Exception e) {e.printStackTrace();}
+        return serverPort;
     }
 
 }
