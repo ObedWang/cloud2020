@@ -12,4 +12,15 @@ eureka:
 spring:
   application:
     name: cloud-provider-hystrix-order
-
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout: 4000
