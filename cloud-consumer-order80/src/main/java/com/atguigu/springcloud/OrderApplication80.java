@@ -17,8 +17,8 @@ import org.springframework.context.annotation.FilterType;
 @EnableEurekaClient
 @ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,classes = {RibbonRuleConfig.class}))
 @RibbonClients(value = {@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = RibbonRuleConfig.class)})
-public class OrderApplication {
+public class OrderApplication80 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderApplication80.class, args);
     }
 }
