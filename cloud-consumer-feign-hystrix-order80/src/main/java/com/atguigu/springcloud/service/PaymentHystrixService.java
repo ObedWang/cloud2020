@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author ：web
  * @date ：23:21 2020/10/21
  */
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentFallbackService.class)
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentHystrixFallback.class)
 public interface PaymentHystrixService {
     @GetMapping("/payment/hystrix/ok/{id}")
-    public String paymentInfo_OK(@PathVariable("id") Integer id);
+    String paymentInfo_OK(@PathVariable("id") Integer id);
 
     @GetMapping("/payment/hystrix/timeout/{id}")
-    public String paymentInfo_TimeOut(@PathVariable("id") Integer id);
+    String paymentInfo_TimeOut(@PathVariable("id") Integer id);
 }
