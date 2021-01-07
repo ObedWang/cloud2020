@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          配置git仓库地址
+          uri: https://github.com/ObedWang/config
+#          配置仓库路径
+#          search-paths: spring-cloud.yml
+#          仓库分支
+          default-label: main
+#          git仓库用户名
+          username:
+#            git的密码
+          password:
+    bus:
+      refresh:
+        enabled: true
+      enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    listener:
+      missing-topics-fatal: false
+    producer:
+    consumer:
+      group-id: ${spring.application.name}
+server:
+  port: 8888
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: config-server
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,bus-refresh

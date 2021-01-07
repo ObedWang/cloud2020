@@ -1,19 +1,17 @@
-package com.atguigu.springcloud;
+package com.atguigu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author : wangebie
- * @date : 2020/12/29 18:01
+ * @date : 2021/1/6 17:08
  */
 @SpringBootApplication
-@EnableConfigServer
 @EnableDiscoveryClient
-public class ConfigServerApplication {
+public class ManualFeignApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerApplication.class,args);
+        SpringApplication.run(ManualFeignApplication.class,args);
     }
 }
