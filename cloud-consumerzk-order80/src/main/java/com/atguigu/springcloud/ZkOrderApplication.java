@@ -2,16 +2,16 @@ package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author ：web
- * @date ：19:30 2020/10/17
+ * @date ：23:53 2020/10/18
  */
-@EnableEurekaServer
 @SpringBootApplication
-public class EurekaApplication {
+@EnableDiscoveryClient
+public class ZkOrderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class,args);
+        SpringApplication.run(ZkOrderApplication.class,args);
     }
 }

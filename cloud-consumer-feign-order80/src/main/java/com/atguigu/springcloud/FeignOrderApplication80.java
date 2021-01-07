@@ -2,18 +2,16 @@ package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @author ：web
- * @date ：23:21 2020/10/21
+ * @author : wangeb
+ * @date : 2020/10/20 19:55
  */
 @SpringBootApplication
 @EnableFeignClients
-@EnableHystrix
-public class OrderApplication {
+public class FeignOrderApplication80 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class,args);
+        SpringApplication.run(FeignOrderApplication80.class,args);
     }
 }

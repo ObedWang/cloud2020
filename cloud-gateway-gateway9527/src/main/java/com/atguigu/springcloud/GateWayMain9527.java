@@ -2,16 +2,18 @@ package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * @author ：web
- * @date ：17:08 2020/10/17
+ * 路由 断言 过滤
+ * @author Obed
  */
-@EnableEurekaServer
 @SpringBootApplication
-public class EurekaApplication {
+@EnableEurekaClient
+public class GateWayMain9527 {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class,args);
+        SpringApplication.run( GateWayMain9527.class,args);
     }
 }
+
+
