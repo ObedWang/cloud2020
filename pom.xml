@@ -28,10 +28,10 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>cloud-kafka</module>
-        <module>server-zipkin</module>
         <module>server-hi</module>
         <module>service-miya</module>
-        <module>manual-feign</module>
+        <module>myjson-spring-boot-starter</module>
+        <module>starter-user-example</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

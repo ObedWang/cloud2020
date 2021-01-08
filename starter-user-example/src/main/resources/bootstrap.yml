@@ -1,0 +1,17 @@
+server:
+  port: 8991
+spring:
+  application:
+    name: starter-user-example
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+data:
+  json:
+    name: wangebie

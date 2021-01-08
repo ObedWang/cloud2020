@@ -6,12 +6,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author : wangebie
- * @date : 2021/1/6 17:08
+ * @date : 2021/1/7 15:43
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ManualFeignApplication {
+public class StarterUserExampleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ManualFeignApplication.class,args);
+        SpringApplication.run(StarterUserExampleApplication.class,args);
     }
 }
