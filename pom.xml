@@ -32,6 +32,8 @@
         <module>service-miya</module>
         <module>myjson-spring-boot-starter</module>
         <module>starter-user-example</module>
+        <module>config-client9093</module>
+        <module>cloud-stream-kafka-provider8801</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

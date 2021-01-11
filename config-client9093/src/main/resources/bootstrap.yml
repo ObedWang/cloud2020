@@ -1,3 +1,5 @@
+server:
+  port: 9093
 spring:
   application:
     name: config-client
@@ -5,11 +7,11 @@ spring:
     config:
       profile: dev
       label: main
-#      uri: http://localhost:8888/spring-cloud.yml
+      #      uri: http://localhost:8888/spring-cloud.yml
       discovery:
-#        是否从配置中心读取文件
+        #        是否从配置中心读取文件
         enabled: true
-#        配置中心的service-id，即服务名
+        #        配置中心的service-id，即服务名
         serviceId: config-server
       name: ${spring.application.name}
     bus:
@@ -20,8 +22,6 @@ spring:
       kafka:
         binder:
           brokers: localhost:9092
-server:
-  port: 8881
 eureka:
   client:
     service-url:
