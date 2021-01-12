@@ -34,6 +34,8 @@
         <module>starter-user-example</module>
         <module>config-client9093</module>
         <module>cloud-stream-kafka-provider8801</module>
+        <module>cloud-stream-kafka-consumer8802</module>
+        <module>cloud-stream-kafka-consumer8803</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
