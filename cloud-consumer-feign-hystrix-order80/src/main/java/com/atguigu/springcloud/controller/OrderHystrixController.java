@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * controller
+ * demo.web.controller
  * @author ：web
  * @date ：23:22 2020/10/21
  */

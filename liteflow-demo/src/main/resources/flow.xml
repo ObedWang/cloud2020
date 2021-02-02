@@ -1,0 +1,5 @@
+<flow>
+    <chain name="chain1">
+        <then value="testComponent,testComponent2,cond(testComponent,testComponent2)"/>
+    </chain>
+</flow>

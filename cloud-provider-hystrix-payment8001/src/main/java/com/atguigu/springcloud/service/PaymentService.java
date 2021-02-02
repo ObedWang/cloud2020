@@ -22,9 +22,9 @@ public class PaymentService {
     }
 
     //失败
-//    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
-//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")  //3秒钟以内就是正常的业务逻辑
-//    })
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")  //3秒钟以内就是正常的业务逻辑
+    })
     public String paymentInfo_TimeOut(Integer id) {
         int timeNumber = 3;
 //        int age = 10 / 0;
