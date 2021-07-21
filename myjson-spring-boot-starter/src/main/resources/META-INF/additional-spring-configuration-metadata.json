@@ -3,8 +3,8 @@
     {
       "name": "data.json.name",
       "type": "java.lang.String",
-      "description": "名称.",
-      "defaultValue": "propertiesObed"
+      "description": "名称 非要用句号结尾....",
+      "defaultValue": "Obed"
     }
   ]
 }

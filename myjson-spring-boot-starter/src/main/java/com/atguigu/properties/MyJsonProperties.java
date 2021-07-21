@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MyJsonProperties {
     public static final String DEFAULT_NAME = "Obed";
     public String name = DEFAULT_NAME;
+    public Boolean enable = false;
 
     public String getName() {
         return name;
@@ -17,5 +18,13 @@ public class MyJsonProperties {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getEnable() {
+        return enable;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
     }
 }
